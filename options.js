@@ -27,7 +27,8 @@ function onCellFocus(event){
     cellNamePlaceholder.innerText=elementId;
     activeElement=event.target;
 
-    document.getElementById("expressionInput").value = "";  // Newly added
+    //document.getElementById("expressionInput").value = "";  // Newly added
+    
 
     if(state[elementId]){
         resetOptions(state[elementId]);
@@ -39,8 +40,7 @@ function onCellFocus(event){
 
 function resetOptions(optionsState){
 
-    // fontSizeInput.value=optionsState.fontSize;
-    // fontFamilyInput.value=optionsState.fontFamily; 
+    
     form.fontfamily.value= optionsState.fontFamily;
     form.fontsize.value=optionsState.fontSize;
     form.textalign.value=optionsState.textAlign;
@@ -55,6 +55,8 @@ function resetOptions(optionsState){
 // function onChangeFontSize(){
 
 // }
+
+
 
 function onFormChange(){
     if(!activeElement){
